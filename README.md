@@ -23,23 +23,29 @@
 
 ## 설치 방법
 
-1. 가상 환경 설치 및 활성화
+1. Git Clone
+```
+git clone https://github.com/namkidong98/Samsung_OCR-Chatbot.git
+cd Samsung_OCR-Chatbot
+```
+
+2. 가상 환경 설치 및 활성화
 ```linux
 conda create -n samsung python=3.10
 conda activate samsung
 ```
 
-2. torch 설치
+3. torch 설치
 ```linux
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 ```
 
-3. 나머지 dependency 설치
+4. 나머지 dependency 설치
 ```linux
 pip install -r requirements.txt
 ```
 
-4. streamlit 실행
+5. streamlit 실행
 ```linux
 streamlit run app.py
 ```
