@@ -5,4 +5,5 @@ fastembed
 chardet
 langchain
 chromadb
-langchain-openai
+transformers
+sentence-transformers

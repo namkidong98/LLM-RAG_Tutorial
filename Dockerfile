@@ -22,8 +22,8 @@ SHELL ["/bin/bash", "--login", "-c"]
 
 # github clone해오기
 WORKDIR /server
-RUN git clone https://github.com/namkidong98/<github주소> .
-RUN cd /<github주소>
+RUN git clone -b ollama https://github.com/namkidong98/Samsung_OCR-Chatbot.git .
+RUN cd /Samsung_OCR-Chatbot
 
 # git clone해온 디렉토리에 있는 requirements.txt로 설치
 RUN /root/miniconda/envs/samsung/bin/pip install -r requirements.txt
