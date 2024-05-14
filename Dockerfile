@@ -21,7 +21,7 @@ RUN echo "conda activate samsung" >> ~/.bashrc
 SHELL ["/bin/bash", "--login", "-c"]
 
 # github clone해오기
-WORKDIR /server
+WORKDIR /Samsung_OCR-Chatbot
 RUN git clone -b ollama https://github.com/namkidong98/Samsung_OCR-Chatbot.git .
 RUN cd /Samsung_OCR-Chatbot
 
@@ -32,11 +32,12 @@ RUN /root/miniconda/envs/samsung/bin/pip install -r requirements.txt
 RUN curl https://ollama.ai/install.sh | sh
 
 # huggingface에서 model 설치
-RUN huggingface-cli download \
-heegyu/EEVE-Korean-Instruct-10.8B-v1.0-GGUF ggml-model-Q5_K_M.gguf \
---local-dir ./models --local-dir-use-symlinks False
+# RUN /root/miniconda/envs/samsung/bin/pip install huggingface-cli
+# RUN huggingface-cli download heegyu/EEVE-Korean-Instruct-10.8B-v1.0-GGUF ggml-model-Q5_K_M.gguf --local-dir /models --local-dir-use-symlinks False
+RUN wget -O models/ggml-model-Q5_K_M.gguf https://huggingface.co/heegyu/EEVE-Korean-Instruct-10.8B-v1.0-GGUF/resolve/main/ggml-model-Q5_K_M.gguf?download=true
 
 # Modelfile로 만들기
+RUN ollama list
 RUN ollama create EEVE-Korean-10.8B -f models/Modelfile
 
 # 마지막으로 streamlit 실행
