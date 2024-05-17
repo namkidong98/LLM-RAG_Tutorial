@@ -8,8 +8,8 @@
 
 1. Git Clone
 ```
-git clone -b ollama https://github.com/namkidong98/Samsung_OCR-Chatbot.git
-cd Samsung_OCR-Chatbot
+git clone -b ollama https://github.com/namkidong98/LLM-RAG_Tutorial.git
+cd LLM-RAG_Tutorial
 ```
 
 2. 가상 환경 설치 및 활성화
