@@ -1,6 +1,6 @@
 ## Branch별 특징 설명
-1. <a href="https://github.com/namkidong98/LLM-RAG_Tuturoial">main</a> : ChatGPT API로 LLM의 응답 생성 역할을 처리
-2. <a href="https://github.com/namkidong98/LLM-RAG_Tuturoial/tree/ollama">ollama</a> : Ollama를 사용하여 로컬에 다운로드한 LLM(EEVE-Korean-10.8B)을 사용
+1. <a href="https://github.com/namkidong98/LLM-RAG_Tutorial">main</a> : ChatGPT API로 LLM의 응답 생성 역할을 처리
+2. <a href="https://github.com/namkidong98/LLM-RAG_Tutorial/tree/ollama">ollama</a> : Ollama를 사용하여 로컬에 다운로드한 LLM(EEVE-Korean-10.8B)을 사용
 
 <br>
 
@@ -8,8 +8,8 @@
 
 1. Git Clone
 ```
-git clone https://github.com/namkidong98/Samsung_OCR-Chatbot.git
-cd Samsung_OCR-Chatbot
+git clone https://github.com/namkidong98/LLM-RAG_Tutorial.git
+cd LLM-RAG_Tutorial
 ```
 
 2. 최상위 폴더에 .env 파일 생성 & <DUMMY>에 발급된 OpenAI의 API Key 넣기
