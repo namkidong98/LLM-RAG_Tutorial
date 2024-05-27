@@ -10,7 +10,6 @@ from langchain.schema.runnable import RunnablePassthrough
 from langchain.prompts import PromptTemplate
 from langchain_community.vectorstores.utils import filter_complex_metadata
 
-BASE_URL = "" # Ngrok을 통해 localhost:11434와 연결될 임시 URL을 적는 위치
 USE_BGE_EMBEDDING = True
 
 class ChatBot:
@@ -19,7 +18,7 @@ class ChatBot:
     chain = None
 
     def __init__(self):
-        self.model = ChatOllama(model="EEVE-Korean-10.8B:latest", verbose=True, base_url=BASE_URL)
+        self.model = ChatOllama(model="EEVE-Korean-10.8B:latest")
         self.text_splitter = RecursiveCharacterTextSplitter(chunk_size=1024, chunk_overlap=100) # PDF 텍스트 분할
         self.prompt = PromptTemplate.from_template(
             """
