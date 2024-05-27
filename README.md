@@ -1,6 +1,7 @@
 ## Branch별 특징 설명
 1. <a href="https://github.com/namkidong98/LLM-RAG_Tuturoial">main</a> : ChatGPT API로 LLM의 응답 생성 역할을 처리
 2. <a href="https://github.com/namkidong98/LLM-RAG_Tuturoial/tree/ollama">ollama</a> : Ollama를 사용하여 로컬에 다운로드한 LLM(EEVE-Korean-10.8B)을 사용
+3. <a href="https://github.com/namkidong98/LLM-RAG_Tuturoial/tree/ngrok-ollama">ngrok-ollama</a> : Colab GPU를 사용하여 Ollama를 구동하여 EEVE-Korean-10.8B을 사용
 
 <br>
 
@@ -8,7 +9,7 @@
 
 1. Git Clone
 ```
-git clone -b ollama https://github.com/namkidong98/LLM-RAG_Tutorial.git
+git clone -b ngrok-ollama https://github.com/namkidong98/LLM-RAG_Tutorial.git
 cd LLM-RAG_Tutorial
 ```
 
@@ -28,29 +29,18 @@ pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu12
 pip install -r requirements.txt
 ```
 
-5. HuggingFace에서 모델 다운     
-https://huggingface.co/heegyu/EEVE-Korean-Instruct-10.8B-v1.0-GGUF/tree/main에서    
-ggml-model-Q5_K_M.gguf을 다운받아 models폴더 안에 저장한다     
+<br>
 
-<img width=600 src="https://github.com/namkidong98/Samsung_OCR-Chatbot/assets/113520117/4af7058a-5869-4827-bb7a-aa0a85e86ea7">
+5. Colab(or GPU 서버)에서 ollama_colab.ipynb을 업로드하여 실행
+<img width=800 src="https://github.com/namkidong98/LLM-RAG_Tutorial/assets/113520117/664672c8-ad70-4bd8-b5dd-07a51755ad49">
+
+- ollama branch의 5번(huggingface 모델 다운로드), 6번(modelfile 작성 및 ollama create)를 처리하는 코드
+- 해당 서버에서 발급되는 URL을 llm_rag.py의 BASE_URL에 할당
+<img width=800 src="https://github.com/namkidong98/LLM-RAG_Tutorial/assets/113520117/3654f4cc-a4cc-421b-87e6-35413edc3ef8">
 
 <br><br>
 
-6. Ollama 설치 후 Modelfile로 create
-
-https://ollama.com/download에서 OS에 맞게 Ollama를 설치하고 실행한다    
-다음 명령어를 실행     
-```
-ollama list
-ollama create EEVE-Korean-10.8B -f models/Modelfile
-ollama list                            # EEVE-Korean-10.8B:latest 생성된 것을 확인
-ollama run EEVE-Korean-10.8B           # 이렇게 터미널에서 테스트 가능 
-```
-<img width=600 src="https://github.com/namkidong98/Samsung_OCR-Chatbot/assets/113520117/a4332c8d-6de6-4073-a2ff-670dbb121939">
-
-<br>
-
-7. streamlit 실행
+6. streamlit 실행
 ```
 streamlit run app.py
 ```
