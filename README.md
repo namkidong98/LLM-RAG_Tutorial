@@ -1,6 +1,7 @@
 ## Branch별 특징 설명
 1. <a href="https://github.com/namkidong98/LLM-RAG_Tutorial">main</a> : ChatGPT API로 LLM의 응답 생성 역할을 처리
 2. <a href="https://github.com/namkidong98/LLM-RAG_Tutorial/tree/ollama">ollama</a> : Ollama를 사용하여 로컬에 다운로드한 LLM(EEVE-Korean-10.8B)을 사용
+3. <a href="https://github.com/namkidong98/LLM-RAG_Tuturoial/tree/ngrok-ollama">ngrok-ollama</a> : Colab GPU를 사용하여 Ollama를 구동하여 EEVE-Korean-10.8B을 사용
 
 <br>
 
